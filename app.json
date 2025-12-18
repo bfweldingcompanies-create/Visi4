@@ -3,12 +3,26 @@
     "name": "Visi4",
     "slug": "visi4",
     "version": "1.0.3",
+    "orientation": "portrait",
     "icon": "./assets/logo.png",
+    "userInterfaceStyle": "automatic",
+
     "android": {
       "package": "com.freemindvision.visi4",
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#000000"
+      }
+    },
+
+    "ios": {
+      "bundleIdentifier": "com.freemindvision.visi4"
+    },
+
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_PAR_TON_PROJECT_ID_EXPO"
       }
     }
   }
