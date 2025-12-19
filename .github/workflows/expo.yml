@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
           cache: npm
 
       - name: Install dependencies
@@ -24,11 +24,6 @@ jobs:
 
       - name: Install Expo & EAS CLI
         run: npm install -g expo eas-cli
-
-      - name: Verify Expo authentication
-        run: eas whoami
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Build Android (AAB)
         run: eas build --platform android --profile production --non-interactive
