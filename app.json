@@ -1,54 +1,13 @@
 {
   "expo": {
-    "name": "Visi4",
-    "slug": "visi4",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "visi4",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-
-    "ios": {
-      "supportsTablet": true
+    "extra": {
+      "eas": {
+        "projectId": "48700c55-8bd7-49c7-86d9-9a589f3a5c05"
+      }
     },
-
+    "owner": "freemindvision_app",
     "android": {
-      "package": "com.freemindvision.visi4",
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
-      },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
-    },
-
-    "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
-          "dark": {
-            "backgroundColor": "#000000"
-          }
-        }
-      ]
-    ],
-
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
+      "package": "com.freemindvision_app.visi4"
     }
   }
 }
