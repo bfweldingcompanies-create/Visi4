@@ -2,28 +2,22 @@
   "expo": {
     "name": "Visi4",
     "slug": "visi4",
-    "version": "1.0.3",
-    "orientation": "portrait",
-    "icon": "./assets/logo.png",
-    "userInterfaceStyle": "automatic",
-
+    "version": "1.0.0",
     "android": {
       "package": "com.freemindvision.visi4",
-      "versionCode": 3,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
       }
     },
-
     "ios": {
       "bundleIdentifier": "com.freemindvision.visi4"
     },
-
     "extra": {
       "eas": {
-        "projectId": "REPLACE_PAR_TON_PROJECT_ID_EXPO"
+        "projectId": "48700c55-8bd7-49c7-86d9-9a589f3a5c05"
       }
-    }
+    },
+    "owner": "freemindvision_app"
   }
 }
