@@ -1,11 +1,7 @@
 {
   "build": {
-    "production": {
-      "android": {
-        "buildType": "app-bundle"
-      }
-    },
-    "apk": {
+    "preview": {
+      "credentialsSource": "remote",
       "android": {
         "buildType": "apk"
       }
