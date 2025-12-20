@@ -20,24 +20,17 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Install Expo & EAS CLI
         run: npm install -g expo eas-cli
 
-      - name: Verify Expo authentication
-        run: expo whoami
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
-      # 🔹 Build AAB (Play Store)
-      - name: Build Android AAB
-        run: eas build --platform android --profile production --non-interactive
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
-      # 🔹 Build APK (installation directe)
       - name: Build Android APK
         run: eas build --platform android --profile preview --non-interactive
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Build Android AAB
+        run: eas build --platform android --profile production --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
