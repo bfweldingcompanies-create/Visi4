@@ -1,4 +1,4 @@
-name: Expo EAS Build Android
+name: Expo EAS Build Android (APK + AAB)
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: npm
 
       - name: Install dependencies
@@ -25,7 +25,19 @@ jobs:
       - name: Install Expo & EAS CLI
         run: npm install -g expo eas-cli
 
-      - name: Build Android (AAB)
+      - name: Verify Expo authentication
+        run: expo whoami
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
+      # 🔹 Build AAB (Play Store)
+      - name: Build Android AAB
         run: eas build --platform android --profile production --non-interactive
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
+      # 🔹 Build APK (installation directe)
+      - name: Build Android APK
+        run: eas build --platform android --profile preview --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
